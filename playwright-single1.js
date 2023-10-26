@@ -50,10 +50,6 @@ const playwrightClientVersion = cp.execSync('npx playwright --version').toString
         else{
             console.log('inplut message is not displayed')
         }
-        //await page.waitForTimeout(5000)
+        await page.waitForTimeout(5000)
         })()
 
-async function teardown(page, browser) {
-  await page.close();
-  await browser.close();
-}
